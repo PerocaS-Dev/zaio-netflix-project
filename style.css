@@ -188,11 +188,12 @@ h1 {
     color: #999999;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     border: 1px solid #999999;
     padding: 0 10px;
     margin-top: 30px;
     border-radius: 3px;
+    position: relative; /* Needed for absolute positioning inside */
 }
 
 .language select {
@@ -202,6 +203,16 @@ h1 {
     appearance: none;
     background: black;
     color: #999999;
-    background: url(./assets/Chevron-icon-drop-down-menu-WHITE.png) no-repeat 100%;
+    cursor: pointer;
+}
 
+.drop-down {
+    position: absolute;
+    right: 10px;
+    pointer-events: none; /* Prevents the icon from interfering with selection */
+}
+
+.drop-down .material-icons {
+    margin-top: 3px;
+    color: #999999;
 }
